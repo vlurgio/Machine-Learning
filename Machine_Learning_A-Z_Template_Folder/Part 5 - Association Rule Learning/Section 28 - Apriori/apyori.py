@@ -297,6 +297,10 @@ def apriori(transactions, **kwargs):
             continue
         yield RelationRecord(
             support_record.items, support_record.support, ordered_statistics)
+        
+
+         
+    
 
 
 ################################################################################
@@ -439,3 +443,6 @@ def main(**kwargs):
 
 if __name__ == '__main__':
     main()
+    
+    
+
