@@ -27,14 +27,18 @@ for n in range(0, N):
     ads_selected.append(ad)
     reward = dataset.values[n, ad]
     if reward == 1:
-        numbers_of_rewards_1[ad] = numbers_of_rewards_1[ad] + 1
+        numbers_of_rewards_1[ad] += 1
     else:
-        numbers_of_rewards_0[ad] = numbers_of_rewards_0[ad] + 1
-    total_reward = total_reward + reward
-
-# Visualising the results - Histogram
+        numbers_of_rewards_0[ad] += 1
+    total_reward += reward
+    
+# Visualising the results
 plt.hist(ads_selected)
 plt.title('Histogram of ads selections')
 plt.xlabel('Ads')
-plt.ylabel('Number of times each ad was selected')
+plt.ylabel('# of times Selected')
 plt.show()
+    
+    
+    
+                
